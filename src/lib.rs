@@ -15,16 +15,16 @@ impl Scanner {
         Scanner { timeout: timeout }
     }
 
-    pub async fn run(&self, host: String, port_start: u16, port_end: u16) -> Vec<SocketAddr> {
+    pub async fn run(&self, host: String, port_start: u32, port_end: u32) -> Vec<SocketAddr> {
         execute(host, port_start, port_end, self.timeout).await
     }
 
     pub async fn run_batched(
         &self,
         host: String,
-        port_start: u16,
-        port_end: u16,
-        batch: u16,
+        port_start: u32,
+        port_end: u32,
+        batch: u32,
     ) -> Vec<SocketAddr> {
         let mut begin = port_start;
         let mut end = batch;
@@ -42,8 +42,8 @@ impl Scanner {
 
 async fn execute(
     host: String,
-    port_start: u16,
-    port_end: u16,
+    port_start: u32,
+    port_end: u32,
     timeout: Duration,
 ) -> Vec<SocketAddr> {
     let mut ftrs = FuturesUnordered::new();
@@ -63,7 +63,7 @@ async fn execute(
     })
 }
 
-async fn try_connect(host: String, port: u16, timeout: Duration) -> io::Result<SocketAddr> {
+async fn try_connect(host: String, port: u32, timeout: Duration) -> io::Result<SocketAddr> {
     let addr = host.to_string() + ":" + &port.to_string();
     match addr.parse() {
         Ok(sock_addr) => match connect(sock_addr, timeout).await {
