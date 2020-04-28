@@ -18,7 +18,7 @@ To run a port scan against localhost.  This will return a vector of socket addre
 
 ```
 
-It's easy to run out of open files on your system.  To get around this, limit the scanner to running in batches of ports at a time:
+It's easy to hit the open files limit on your system.  To get around this, limit the scanner to running in batches of ports at a time:
 
 ```rust
   let ftr = ps.run_batched("127.0.0.1".to_string(), 1, 65535, 10000);
