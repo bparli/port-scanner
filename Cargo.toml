@@ -1,6 +1,6 @@
 [package]
 name = "async-port-scanner"
-version = "0.1.1"
+version = "0.1.2"
 authors = ["Ben Parli <bparli@gmail.com>"]
 edition = "2018"
 keywords = ["async", "network", "scan", "monitoring"]
