@@ -4,7 +4,7 @@ version = "0.1.0"
 authors = ["Ben Parli <ben.parli@creditkarma.com>"]
 edition = "2018"
 keywords = ["async", "network", "scan", "monitoring"]
-categories = ["network-monitoring", "port-scanning"]
+categories = ["network-programming"]
 description = "Simple, yet fast, async port scanner library for Rust"
 license = "MIT"
 
