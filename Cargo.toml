@@ -8,6 +8,7 @@ categories = ["network-programming"]
 description = "Simple, yet fast, async port scanner library for Rust"
 license = "MIT"
 repository = "https://github.com/bparli/port-scanner"
+homepage = "https://github.com/bparli/port-scanner"
 
 [dependencies]
 futures = "0.3"
