@@ -9,7 +9,7 @@ To run a port scan against localhost.  This will return a vector of socket addre
 ```rust
   use async_std::task;
   use futures::future::join_all;
-  use port_scanner::Scanner;
+  use async_port_scanner::Scanner;
   let ps = Scanner::new(Duration::from_secs(4));
 
   let ftr = ps.run("127.0.0.1".to_string(), 1, 65535);
