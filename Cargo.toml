@@ -13,4 +13,4 @@ readme = "README.md"
 
 [dependencies]
 futures = "0.3"
-async-std = "1.5"
+async-std = "1.6"
